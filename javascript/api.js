@@ -20,8 +20,15 @@ function gifButtons(){
         gifButton.addClass("gif");
         gifButton.attr("data-name", gifs[i]);
         gifButton.text(gifs[i]);
-        $("#gif-area").append(i);
+        $("#gif-area").append(gifButton);
     }
 }
 gifButtons();
+//when the submit button is clicked, an event runs
+$("#add-gif").on("click", function(event){
+    event.preventDefault();
+    var gifSearch = $("#gif-input").val().trim();
+    gifs.push(gifSearch);
+    gifButtons();
+})
 })
