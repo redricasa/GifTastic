@@ -1,16 +1,26 @@
 $(document).ready(function(){
+    var limit = 10;
     var APIkey = "B8y7gQpprsocHT91dIPf6DqU0dS1AQin";
     var userSearch = "cat"; // user's search word entered here
-    var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + userSearch +"&api_key="+ APIkey
-      
+    var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + userSearch +"&api_key="+ APIkey+"&limit="+limit;
+    
     $.ajax({
         url: queryUrl, 
         method: "GET"
     }).then(function(response){
-        resp = response;
+        //create a dynamic entry of gifs that gets the animated and still gifs to attributes
+        topics.forEach(function(data){
+            var img = $("<img>");
+            img.attr("data-still", response.data.images.fixed_height_still.url);
+            img.attr("data-animate", response.data.images.looping.mp4);
+            img.addClass("gif");
+            img.attr("src",response.data.images.fixed_height_still.url);
+            img.attr("data-state", "still")
+            data();
+        });
         console.log(response);
+
     });
-    
     // variable to store the gif searches
     var topics = ["cats","dogs","guniea pigs"];
     function gifButtons(){
@@ -25,6 +35,8 @@ $(document).ready(function(){
             $("#gif-area").append(gifButton);
         }
     }
+    //add a function that takes entry and equals it to userSearch
+
     gifButtons();
     //when the submit button is clicked, an event runs
     $("#add-gif").on("click", function(event){
@@ -45,12 +57,7 @@ $(document).ready(function(){
             $(this).attr("data-state","still");
         }
     });
-    //create a dynamic entry of gifs that gets the animated and still gifs to attributes
-    topics.forEach(function(){
-        var img = $("<img>");
-        img.attr("data-still", )
-    })
+   
+   
     
-
-
 });
