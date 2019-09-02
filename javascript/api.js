@@ -1,13 +1,13 @@
 $(document).ready(function(){
-    var limit = 10; 
     var APIkey = "B8y7gQpprsocHT91dIPf6DqU0dS1AQin";
     var userSearch = "cat"; // user's search word entered here
-    var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + userSearch +"&api_key="+ APIkey+"&limit="+ limit;
+    var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + userSearch +"&api_key="+ APIkey
       
     $.ajax({
         url: queryUrl, 
         method: "GET"
     }).then(function(response){
+        resp = response;
         console.log(response);
     });
     
@@ -44,8 +44,13 @@ $(document).ready(function(){
             $(this).attr("src", $(this).attr("data-still"));
             $(this).attr("data-state","still");
         }
-
     });
+    //create a dynamic entry of gifs that gets the animated and still gifs to attributes
+    topics.forEach(function(){
+        var img = $("<img>");
+        img.attr("data-still", )
+    })
+    
 
 
 });

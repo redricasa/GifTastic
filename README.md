@@ -13,6 +13,15 @@ Only once you get images displaying with button presses should you move on to th
 - Add a form to your page that takes a value from a user input box and adds it to your topics array. Then make a function call that takes each topic in the array and remakes the buttons on the page.
 - Deploy your assignment to Github Pages.
 
-LINK TO DEPLOYED TECHNOLOGY:
+LINK TO DEPLOYED TECHNOLOGY: https://redricasa.github.io/GifTastic/
+GITHUB REPOSITORY: https://github.com/redricasa/GifTastic 
 TECHNOLOGIES USED: Jquery, CSS, Javascript, ajax, Giphy API
 PSUDOCODE:
+- Create code for:
+    - ajax get method for accessing gif objects
+    - a function to render buttons for items pushed into the topics array
+    - an on click funuction that pushes search items to the topics array when the Add Topic button is clicked
+    - Another on click function with an if/else statement to toggle between the image and animated states of the gifs
+    - use .forEach() method to loop through the topics array and dynamically create 10 items for each botton clicked- which would go through the objects received and get still and animated maps for each gif.
+    
+
