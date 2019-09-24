@@ -1,27 +1,18 @@
 # GifTastic
-UW coding bootcamp week 6 HW 
-INSTRUCITONS:
-- Before you can make any part of your site work, you need to create an array of strings, each one related to a topic that interests you. Save it to a variable called topics.
+Gif genarator through Giphy API
+## LINK TO DEPLOYED TECHNOLOGY: https://redricasa.github.io/GifTastic/
+## Overview
 - We chose animals for our theme, but you can make a list to your own liking.
-- Your app should take the topics in this array and create buttons in your HTML.
-- Try using a loop that appends a button for each string in the array.
 - When the user clicks on a button, the page should grab 10 static, non-animated gif images from the GIPHY API and place them on the page.
 When the user clicks one of the still GIPHY images, the gif should animate. If the user clicks the gif again, it should stop playing.
+## TECHNOLOGIES USED
+- Jquery
+- CSS
+- Javascript
+- ajax
+- Giphy API
+## Next Steps
 - Under every gif, display its rating (PG, G, so on).
-- This data is provided by the GIPHY API.
-Only once you get images displaying with button presses should you move on to the next step.
-- Add a form to your page that takes a value from a user input box and adds it to your topics array. Then make a function call that takes each topic in the array and remakes the buttons on the page.
-- Deploy your assignment to Github Pages.
-
-LINK TO DEPLOYED TECHNOLOGY: https://redricasa.github.io/GifTastic/
-GITHUB REPOSITORY: https://github.com/redricasa/GifTastic 
-TECHNOLOGIES USED: Jquery, CSS, Javascript, ajax, Giphy API
-PSUDOCODE:
-- Create code for:
-    - ajax get method for accessing gif objects
-    - a function to render buttons for items pushed into the topics array
-    - an on click funuction that pushes search items to the topics array when the Add Topic button is clicked
-    - Another on click function with an if/else statement to toggle between the image and animated states of the gifs
-    - use .forEach() method to loop through the topics array and dynamically create 10 items for each botton clicked- which would go through the objects received and get still and animated maps for each gif.
-    
+- Add bootstrap to make the CSS more appealing. 
+- Add margins between the gifs.
 
