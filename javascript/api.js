@@ -7,8 +7,7 @@ $(document).ready(function(){
         var gifSearch = $("#gif-input").val().trim();
         topics.push(gifSearch);
         gifButtons();
-    })
-    
+    })    
     function gifButtons(){
         //deletes movie buttons to prevent duplicates
         $("#gif-area").empty();
@@ -24,10 +23,9 @@ $(document).ready(function(){
     //add a function that takes entry and equals it to userSearch
     gifButtons();
     $("#gif-area").on("click",".gif-topic", function(){   
-        var limit = 10;
         var APIkey = "B8y7gQpprsocHT91dIPf6DqU0dS1AQin";
         var userSearch = $(this).attr("data-name"); // user's search word entered here
-        var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + userSearch +"&api_key="+ APIkey+"&limit="+limit;
+        var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + userSearch +"&api_key="+ APIkey+"&limit=10";
         // var gifSearch = $(this).attr("data-gif");
         $("#gif-display-area").empty();
         $.ajax({
